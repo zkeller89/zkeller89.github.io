@@ -1,0 +1,5 @@
+# ignore csv files
+*.csv
+
+# ignore cached file
+DI_Proposal_cache/*

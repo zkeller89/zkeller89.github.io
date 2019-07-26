@@ -1,0 +1,147 @@
+---
+title: "Data Incubator Proposal"
+output: html_document
+---
+
+# Workers Compensation Trends in New York
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, cache.lazy = FALSE)
+library(data.table)
+library(tidyverse)
+library(broom)
+```
+
+```{r data, cache=TRUE, echo = FALSE}
+# https://data.ny.gov/Government-Finance/Assembled-Workers-Compensation-Claims-Beginning-20/jshw-gkgu
+wc <- fread("Assembled_Workers__Compensation_Claims___Beginning_2000.csv")
+
+# NY Population Data
+# https://data.ny.gov/Government-Finance/Annual-Population-Estimates-for-New-York-State-and/krt9-ym2k/data
+nypop <- fread("Annual_Population_Estimates_for_New_York_State_and_Counties__Beginning_1970.csv")
+nypop <- nypop[Year %in% 2000:2018, ]
+```
+
+```{r wc_data_manipulation, echo = FALSE}
+wc <- wc[, accident_date := lubridate::mdy(`Accident Date`)]
+wc_no_ad <- wc[is.na(accident_date),]
+
+wc <- wc[!is.na(accident_date), accident_year:=year(accident_date)][
+    accident_year %in% 2000:2019]
+```
+
+```{r nypop_data_manipulation, echo = FALSE}
+nypop <- fread("Annual_Population_Estimates_for_New_York_State_and_Counties__Beginning_1970.csv")
+nypop <- nypop[Year %in% 2000:2018, ]
+
+top_geographies <- nypop[Year == 2018 & Geography != "New York State"][order(-Population)][1:5]$Geography
+bottom_geographies <- nypop[Year == 2018 & Geography != "New York State"][order(Population)][1:5]$Geography
+```
+
+## Exploratory claim trends
+
+The most obvious issue seen is the jump in claims in 2014. This is particularly suspicious and warrants a lot of further investigation before proceeding with the project, as it will likely dominate the analysis moving forward. A reasonably effortful google search did not turn up any major legislative changes or major court decisions made around that time.
+
+It should be noted that there are `r scales::comma(nrow(wc_no_ad))` claims without accident dates. While this is good to know, it does not approach explaining the jump in claims. We can see that 2 geographies (Hempstead and Peekskill) disappear over the years - but this also doesn't account for the jump in claims. It is likely the dip in 2019 is due to insufficient time for development on un-reported claims.
+
+```{r loss_trends}
+wc[, .(n_claims = .N), by = c("accident_year", "District Name")][order(accident_year)] %>% 
+  ggplot(aes(x = accident_year, y = n_claims, fill = `District Name`)) + 
+  geom_col() + 
+  scale_y_continuous(labels = scales::comma_format()) + 
+  labs(x = "Accident Year",
+       y = "Num Claims",
+       title = "Count of Workers Compensation Claims",
+       subtitle = "By District by Year") + theme_bw()
+
+wc[, .(n_claims = .N), by = c("accident_year", "District Name")][order(accident_year)] %>% 
+  ggplot(aes(x = accident_year, y = n_claims, fill = `District Name`)) + 
+  geom_col(position = "fill") + 
+  scale_y_continuous(labels = scales::percent_format()) + 
+  labs(x = "Accident Year",
+       y = "Percent of All Claims for Year",
+       title = "Distribution of Workers Compensation Claims",
+       subtitle = "By District by Year") +
+  theme_bw()
+
+wc[, .(n_claims = .N), by = c("accident_year", "District Name")][
+  accident_year < 2019][
+    order(`District Name`, accident_year), .(accident_year, yoy_change = n_claims / shift(n_claims) - 1), by = "District Name"] %>% 
+  ggplot(aes(x = accident_year, y = yoy_change, col = `District Name`)) + 
+  geom_line() + 
+  geom_point() + 
+  scale_y_continuous(labels = scales::percent_format()) + 
+  labs(x = "Accident Year",
+       y = "% Year-Over-Year Change",
+       title = "Year over Year Change by District") +
+  theme_bw()
+```
+
+## Exploring Population and Claims
+
+Below are fairly basic and marginally informative charts of population over time. We examine the top and bottom geographies over time, observing what looks like a marginal increase in population over time for the top geographies by population, and a decrease in population for the bottom geographies by population.
+
+```{r basic_population_charts}
+nypop[Geography %in% top_geographies & `Program Type` == "Postcensal Population Estimate"] %>% 
+  ggplot(aes(x = Year, y = Population)) + 
+  geom_col() + 
+  scale_y_continuous(labels = scales::comma_format()) +
+  facet_wrap(~ Geography, scales = "free_y") + 
+  theme_bw() + 
+  labs(x = "Year",
+       y = "Population",
+       title = "Population by Year",
+       subtitle = "Top 5 NY Geographies for 2018")
+
+nypop[Geography %in% bottom_geographies & `Program Type` == "Postcensal Population Estimate"] %>% 
+  ggplot(aes(x = Year, y = Population)) + 
+  geom_col() + 
+  scale_y_continuous(labels = scales::comma_format()) +
+  facet_wrap(~ Geography, scales = "free_y") + 
+  theme_bw() + 
+  labs(x = "Year",
+       y = "Population",
+       title = "Population by Year",
+       subtitle = "Bottom 5 NY Geographies for 2018")
+```
+
+If we want to confirm this trend, we can segment by geography and look at the slope of simple linear models for each geography, regressing population on year. We see that the geographies with lower mean populations don't exhibit much of a pattern in their trend, while geographies with higher populations tended to have populations that increased more, on average, per year.
+
+```{r pop change vs total, echo = FALSE}
+nypop[`Program Type` == "Postcensal Population Estimate" & Geography != "New York State"] %>% 
+  nest(-Geography) %>% 
+  mutate(pop_slope = map_dbl(data, ~tidy(lm(Population ~ Year, data = .))[2, "estimate"])) %>% 
+  left_join(nypop[`Program Type` == "Postcensal Population Estimate" & Geography != "New York State",
+            .(mean_pop = mean(Population)),
+            by = "Geography"],
+      by = "Geography") %>% 
+  ggplot(aes(x = mean_pop,
+             y = pop_slope)) + 
+  geom_point(size = 2) + 
+  scale_x_continuous(labels = scales::comma_format()) + 
+  scale_y_continuous(labels = scales::comma_format()) + 
+  theme_bw() + 
+  geom_smooth(se = FALSE) + 
+  labs(title = "Mean Population Change Over Time vs Average Population",
+       x = "Mean Population For All Years",
+       y = "Average Change Per Year (Delta Change Per Year)")
+```
+
+Clearly we need to at least attempt to connect population statistics and claim count. We can examine claims over time, and population, to attempt to glean some insights. Below we see 2014 rear its head again. We've colored the dots and best-fit lines by the pre/post status with respect to 2014, and the relationship between population and claim count looks to reversed. If we are to continue using this dataset, we'll need to better understand the 2014 jump in claim count much better.
+
+```{r pre_post_2014}
+wc[, .(n_claims = .N), by = c("accident_year")][
+  nypop[Geography == "New York State" & `Program Type` == "Postcensal Population Estimate"],
+        .(accident_year, n_claims, Population), 
+        on = c("accident_year" = "Year")] %>% 
+  ggplot(aes(x = Population, y = n_claims, col = accident_year >= 2014)) + 
+  geom_point(size = 3) + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  scale_x_continuous(labels = scales::comma_format()) +
+  scale_y_continuous(labels = scales::comma_format()) +
+  labs(x = "Population",
+       y = "Num Claims",
+       title = "Claims vs Population, NY State",
+       col = "Accident Year >= 2014") + 
+  theme_bw()
+```
