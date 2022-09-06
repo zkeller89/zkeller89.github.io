@@ -12,7 +12,7 @@
   <!-- {%- if site.googleplus_username -%}<li><a href="https://plus.google.com/{{ site.googleplus_username| escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#googleplus' | relative_url }}"></use></svg> <span class="username">{{ site.googleplus_username| escape }}</span></a></li>{%- endif -%} -->
   {%- if site.stackoverflow_username -%}
     <li>
-      <a href="https://stackoverflow.com/users/{{ site.stackoverflow_username | cgi_escape | escape }}">
+      <a href="https://stackoverflow.com/users/{{ site.stackoverflow_username }}">
         <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#stackoverflow' | relative_url }}"></use></svg>
         {% assign full_so_username = site.stackoverflow_username | split: '/' %}
         {% assign shortened_so_username = full_so_username[1] %}
