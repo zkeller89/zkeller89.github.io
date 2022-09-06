@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   learning. It will largely be oriented around data-analytics and data-team
   management and growth.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://zkeller.info " # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://zkeller.info " # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
