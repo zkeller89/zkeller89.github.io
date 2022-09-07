@@ -10,7 +10,7 @@ I've found 'data' as a field to be very rewarding. It almost always requires cro
 
 This blog will largely consist of my learnings and projects related to data, but not exclusively. I may stray from learnings/projects into more opinionated posts, or post about other interests like fitness, soccer, politics (although I'll likely stay away from that publicly), and bearded-dragons.
 
-Also - I'm pretty new to this blogging thing, so please allow for some lack-of-polish while consuming my work here. I have a full time job, an infant, and a reptile at home - so this is going to be a new hobby of mine...which is to say there may be the occasional typo here or there. Feel free to make suggestsions!
+Also - I'm pretty new to this blogging thing, so please allow for some lack-of-polish while consuming my work here. I have a full time job, an infant, and a reptile at home - so this is going to be a new hobby of mine...which is to say there may be the occasional typo here or there. Feel free to make suggestions!
 
 If you'd like to reach out - I figure email or [LinkedIn](https://www.linkedin.com/in/zrkeller/), is a fine medium.
 

@@ -6,13 +6,13 @@ categories: general biographical
 ---
 
 Hello. Welcome to my first post. This blog was inspired by the 'learning in public' portion of
-[Alexey Grivorev](https://alexeygrigorev.com/)'s first lecture for the [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp), which is a wonderful course and I encourage anyone interseted to go through the material and support him if available.
+[Alexey Grivorev](https://alexeygrigorev.com/)'s first lecture for the [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp), which is a wonderful course and I encourage anyone interested to go through the material and support him if available.
 
 I have always been a fairly private person and generally have viewed those that 'learn in public' with a degree of suspicion. This stems both from my somewhat cynical nature and my (admittedly anecdotal) underwhelming experience with folks who have been vocal their progress in their careers.
 
 With that said, why did I decide to switch things up and take up a practice that I view with suspicion?
 1. Extra Credit!
-  * Transparentally, I'm currently enrolled in Alexey's [ML Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp), and the course offers extra-credit for learning in public. While I'm not longer in a position in life where I need extra credit, old habits die hard...yakno?
+  * Transparently, I'm currently enrolled in Alexey's [ML Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp), and the course offers extra-credit for learning in public. While I'm not longer in a position in life where I need extra credit, old habits die hard...yakno?
 2. Accountability
   * Documenting my learning path (starting today...a retrospective would take a while) keeps me accountable and encourages feedback on the work I'm doing. I think in the past
   I've generally been hesitant to receive feedback on extra-curricular work, as at times I feel like a dilettante in the subject areas. This perspective is blatantly counter-product to the learning process, hence the blog.
