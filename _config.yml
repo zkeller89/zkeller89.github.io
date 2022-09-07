@@ -1,9 +1,7 @@
 title: Zack Keller
 email: keller.zr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal site to document both professional and extra-curricular
-  learning. It will largely be oriented around data-analytics and data-team
-  management and growth.
+  Personal blog about mostly data stuff
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://zkeller.info" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
