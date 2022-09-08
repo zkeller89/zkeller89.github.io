@@ -36,3 +36,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - CNAME
+
+# Google Analytics
+google_analytics: G-SQ7D8EC3M2
