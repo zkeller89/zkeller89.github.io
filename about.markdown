@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Zack and I've been working in data for a while. I graduated from UC Berkeley with a degree in cognitive science, proceeded to work in management consulting, found that it wasn't for me, then went back to school for statistics at the University of Michigan (Go Blue!). Since then I've had a few different positions, and I'm currently the head of analytics at [WorkStep](workstep.com). It's a wonderful company and we frequently have both data and non-data openings if you're looking for opportunities.
+My name is Zack and I've been working in data for a while. I graduated from UC Berkeley with a degree in cognitive science, proceeded to work in management consulting, found that it wasn't for me, then went back to school for statistics at the University of Michigan (Go Blue!). Since then I've had a few different positions, and I'm currently the head of analytics at [WorkStep](https://www.workstep.com). It's a wonderful company and we frequently have both data and non-data openings if you're looking for opportunities.
 
 I've found 'data' as a field to be very rewarding. It almost always requires cross-functional collaboration, technical expertise, and regular upkeep with modern methods. While this requires a lot of work, that work is much more engaging for me than other types of work (e.g., selling stuff, designing creative, etc). Moreover, it's a technical field which has made a good effort to welcome folks with unorthodox backgrounds. While this can be frustrating for newcomers because of the large number of folks looking for entry-level roles, I've found that a bit of hard work generally does pay off.
 
