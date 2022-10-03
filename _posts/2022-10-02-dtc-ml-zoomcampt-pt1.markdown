@@ -29,14 +29,13 @@ Below is an abbreviated list of topics covered by the course - pulled from their
 5. Deploying Machine Learning Models
 6. Decision Trees and Ensemble Learning
 7. Bento ML
-
-* Midterm Project
-
 8. Neural Networks and Deep Learning
 9. Serverless Deep Learning
 10. Kubernetes and TensorFlow Serving
 11. KServe (optional)
 
+Also included:
+* Midterm Project
 * Capstone Project
 
 # Why I enrolled
