@@ -2,7 +2,7 @@
 layout: post
 title:  "Course Report: DataTalksClub - ML Zoomcamp, pt 1"
 subtitle: Weeks 1 through 4
-date:   2022-09-18
+date:   2022-10-02
 categories: general biographical
 ---
 
