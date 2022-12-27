@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Course Report: DataTalksClub - ML Zoomcamp, pt 1"
+title:  "Course Report: DataTalksClub - ML Zoomcamp, pt 1/2"
 subtitle: Weeks 1 through 4
 date:   2022-10-02
-categories: general biographical
+categories: data learning course-review
 ---
+
+This is part 1 of a two-part series, [here's the follow up]({% post_url 2022-12-26-dtc-ml-zoomcamp-pt2 %}).
 
 ### TL;DR
 
@@ -46,7 +48,7 @@ Moreover - what particularly caught my eye was the 'Deploying ML Models', 'Serve
 
 # Initial Impressions and Weeks 1 - 4
 
-I've already got some experience in Alexy's courses, as I've taken much of the self-paced [Data Engeinering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) course that he offers. The Data Engineering course offered a lot of hands-on coding with youtube code-along style videos, and the ML Zoomcamp is not much different in that respect. Many of the important topics and techniques of the course are initially coded by hand, using industry-standard python libraries, in order to demonstrate a simplified version of what's going on behind the scenes. This is as opposed to immediately providing a library which automatically performs the regression, classification, or training algorithm/technique being taught. Of course, he informs the learner of these libraries after all is said-and-done, but I think this approach is optimal for the learner who doesn't want a deep-dive right off the bat.
+I've already got some experience in Alexey's courses, as I've taken much of the self-paced [Data Engeinering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) course that he offers. The Data Engineering course offered a lot of hands-on coding with youtube code-along style videos, and the ML Zoomcamp is not much different in that respect. Many of the important topics and techniques of the course are initially coded by hand, using industry-standard python libraries, in order to demonstrate a simplified version of what's going on behind the scenes. This is as opposed to immediately providing a library which automatically performs the regression, classification, or training algorithm/technique being taught. Of course, he informs the learner of these libraries after all is said-and-done, but I think this approach is optimal for the learner who doesn't want a deep-dive right off the bat.
 
 The topics are also covered in a way which isn't too intimidating to a beginner, but still unveils that there's much more to learn about any given topic than what's explicitly taught. For example, his partial derivation of the hat matrix for OLS Linear Regression tempts to learner to dive into linear algebra to learn much more about how these methods are actually brought together. This approach is a great method to cast a wide net and make the content accessible to those looking for a somewhat quick overview and deeper learning alike.
 
