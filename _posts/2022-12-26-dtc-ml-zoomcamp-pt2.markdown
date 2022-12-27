@@ -31,7 +31,7 @@ To wrap up the first half of the course, additional techniques for classificatio
 
 As mentioned above, the 2nd half of the course focused on deep-learning, largely in the context of image classification using the Keras/Tensorflow ecosystem. Theory was covered at a very high level, as to not discourage those without a rigorous mathematics background - however it was readily acknowledged that the importance of understanding the theory behind these techniques should not be ignored - and students were encouraged to explore it with the [Stanford course mentioned above][2]. The deep learning portion did cover the various types of layers in Convolutional Neural Networks and the chief techniques behind creating models and improving their performance. These included transfer-learning, tuning the learning rate, checkpointing, dropout, and data-augmentation.
 
-Similar to the end of the first half, the end of the course shifted focus to the additional work needed to take a model from development to 'production'. This included:
+Similar to the end of the first half, the end of the course shifted focus to the additional work needed to take a model from 'development' to 'production'. This included:
 * Establishing a basic understanding of the issues presented when deploying TensorFlow and deep learning models to production environments
 * Utilizing the [TensorFlow-Lite][6] library to deploy a model to AWS Lambda Functions.
 * An introduction to Kubernetes (both locally and using Amazon EKS), [TensorFlow Serving][7], and how this setup solves issues presented when serving a TensorFlow model.
@@ -40,16 +40,16 @@ Similar to the end of the first half, the end of the course shifted focus to the
 
 ## Final Impressions
 
-At the end of the day, I cannot recommend this class enough. I came into this class with:
+At the end of the day, I cannot recommend this course enough. I came into this class with:
 * Reasonable exposure to statistics and statistical programming frameworks
 * Very little deep learning experience
 * Very little experience when it came to 'deployment' or 'productionizing' anything
 * A 3 month old baby
 * A full-time job
 
-Alexey and his team took efforts to ensure the students were exposed to the 'full stack' of what it meant to develop machine learning models. He took care to ensure additional resources were made available and emphasized additional learning was needed where appropriate. While I don't feel this class made me an expert in machine learning by any means, I do feel like it equipped me with:
-* Confidence to comfortably explore additional resources as I see fit
-* A solid understanding of the distinction and importance and the many roles contributing to production-ready machine learning, and how they interact with each other.
+Alexey and his team took efforts to ensure the students were exposed to the 'full stack' of what it meant to develop machine learning models. He took care to ensure additional resources were made available and emphasized additional learning was needed where appropriate. While I don't feel this class made me an expert in machine learning by any means, it did equip me with:
+* The confidence to comfortably explore additional resources as I see fit
+* A solid understanding of the distinction between and importance of the many roles contributing to production-ready machine learning, and how they interact with each other.
 
 In addition - I was able to remain gainfully employed and my little guy is now 6+ months old and healthy!
 
