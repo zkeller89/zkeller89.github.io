@@ -14,9 +14,38 @@ Also - I'm pretty new to this blogging thing, so please allow for some lack-of-p
 
 If you'd like to reach out - I figure email or [LinkedIn](https://www.linkedin.com/in/zrkeller/), is a fine medium.
 
-[Obligatory link to resume here](/assets/pdf/zkeller_resume_public.pdf)
+### Additional Info:
 
-Enjoy!
-{: style="text-align: center; font-size: 2em" }
+[Link to resume here](/assets/pdf/zkeller_resume_public.pdf)
+
+You can also find me on [github!](https://github.com/zkeller89)
+
+<!-- Credit: https://bloggify.github.io/github-calendar/ -->
+<!-- Prepare a container for your calendar. -->
+<script
+  src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
+>
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
+/>
+
+<!-- Prepare a container for your calendar. -->
+<div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+    new GitHubCalendar(".calendar", "zkeller89");
+</script>
+<br />
+### "Thank for Visiting!"
+{: style="text-align: center; font-size: 2em; margin-bottom: 0"}
+#### - Lil' John, the bearded dragon
+{: style="text-align: center; font-size: 1em" }
 
 ![My office mate, Lil' John](/assets/img/lil_john.png){: style="display:block; width:300px; margin-left:auto; margin-right:auto;" }
