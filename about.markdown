@@ -43,7 +43,7 @@ You can also find me on [github!](https://github.com/zkeller89)
     new GitHubCalendar(".calendar", "zkeller89");
 </script>
 <br />
-### "Thank for Visiting!"
+### "Thanks for Visiting!"
 {: style="text-align: center; font-size: 2em; margin-bottom: 0"}
 #### - Lil' John, the bearded dragon
 {: style="text-align: center; font-size: 1em" }
