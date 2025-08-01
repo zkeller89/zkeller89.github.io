@@ -1,0 +1,134 @@
+.header {
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #000;
+  z-index: 1000;
+}
+
+.nav-brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav-brand a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links button,
+.nav-links a {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.nav-links button:hover,
+.nav-links a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.hero-bio {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-bio {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

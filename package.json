@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website with React frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "dev": "concurrently \"./start-backend.sh\" \"./start-frontend.sh\"",
+    "lint": "./lint.sh",
+    "lint:check": "uv run ruff check backend/",
+    "lint:fix": "uv run ruff check backend/ --fix",
+    "format": "uv run ruff format backend/",
+    "test": "uv run pytest"
+  },
+  "keywords": ["react", "flask", "personal-website"],
+  "author": "Zachary Keller",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
