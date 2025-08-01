@@ -89,17 +89,9 @@ const Contact: React.FC = () => {
         <div className="contact-content">
           <div className="contact-info">
             <h3>Let's Connect</h3>
-            <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-            <div className="contact-methods">
-              <div className="contact-method">
-                <strong>Email:</strong> contact@example.com
-              </div>
-              <div className="contact-method">
-                <strong>Location:</strong> Your Location
-              </div>
-            </div>
+            <p>I'm always interested in networking, collaborations, and possibly new opportunities.</p>
           </div>
-          
+
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -112,7 +104,7 @@ const Contact: React.FC = () => {
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -124,7 +116,7 @@ const Contact: React.FC = () => {
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="message">Message</label>
               <textarea
@@ -136,7 +128,7 @@ const Contact: React.FC = () => {
                 required
               ></textarea>
             </div>
-            
+
             <div className="form-group captcha-group">
               <label htmlFor="captcha_answer">Security Check</label>
               <div className="captcha-container">
@@ -166,15 +158,15 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            
-            <button 
-              type="submit" 
+
+            <button
+              type="submit"
               className="btn btn-primary"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
-            
+
             {status === 'success' && (
               <p className="status-message success">Thank you! Your message has been sent.</p>
             )}

@@ -19,7 +19,7 @@ personal_info = {
     "quick_bio": "Passionate about data, related topics, and some unrelated topics",
     "bio": "Hiya, I'm Zack. Early in my career, I cut my teeth working with spreadsheets. That led me back to grad-school for stats (Go Blue). From there, I've worked in a handful of industries and worked to continue developing my abilities in the ever-expanding space of data and analytics.",
     "email": "contact@example.com",
-    "location": "Columbus, Ohio Metro",
+    "location": "Columbus, Ohio",
     "skills": ["R", "Python", "SQL", "Data-Viz", "BI", "dbt"],
     "social": {
         "github": "https://github.com/zkeller89",
