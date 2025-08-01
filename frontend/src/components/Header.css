@@ -26,6 +26,10 @@
   font-size: 1.5rem;
   font-weight: 700;
 }
+.nav-brand a {
+  text-decoration: none;
+  color: #000;
+}
 
 .nav-links {
   display: flex;
@@ -101,28 +105,28 @@
   .nav {
     padding: 1rem;
   }
-  
+
   .nav-links {
     gap: 1rem;
   }
-  
+
   .nav-links button {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-title {
     font-size: 1.3rem;
   }
-  
+
   .hero-bio {
     font-size: 1.1rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;

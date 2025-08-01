@@ -2,7 +2,9 @@
 
 export interface Profile {
   name: string;
+  short_name: string;
   title: string;
+  quick_bio: string;
   bio: string;
   email: string;
   location: string;
@@ -10,7 +12,6 @@ export interface Profile {
   social: {
     github: string;
     linkedin: string;
-    twitter: string;
   };
 }
 

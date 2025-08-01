@@ -15,11 +15,10 @@ const About: React.FC<AboutProps> = ({ profile }) => {
           <div className="about-text">
             <p>{profile?.bio || 'Tell your story here. Share your background, interests, and what drives you as a developer.'}</p>
             <p>📍 {profile?.location || 'Your Location'}</p>
-            <p>✉️ {profile?.email || 'your.email@example.com'}</p>
             <div className="resume-section">
-              <a 
-                href="/assets/resume.pdf" 
-                target="_blank" 
+              <a
+                href="/assets/resume.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-resume"
               >
@@ -27,7 +26,7 @@ const About: React.FC<AboutProps> = ({ profile }) => {
               </a>
             </div>
           </div>
-          
+
           <div className="skills">
             <h3>Skills & Technologies</h3>
             <div className="skills-grid">

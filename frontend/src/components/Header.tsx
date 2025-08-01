@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ profile }) => {
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
-          <h2>{profile?.name || 'Your Name'}</h2>
+          <a href="/"><h2>{profile?.short_name || 'Your Name'}</h2></a>
         </div>
         <ul className="nav-links">
           <li><button onClick={() => scrollToSection('about')}>About</button></li>
@@ -26,20 +26,20 @@ const Header: React.FC<HeaderProps> = ({ profile }) => {
           <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
         </ul>
       </nav>
-      
+
       <div className="hero">
         <div className="hero-content">
           <h1>Hi, I'm {profile?.name || 'Your Name'}</h1>
           <p className="hero-title">{profile?.title || 'Software Developer'}</p>
-          <p className="hero-bio">{profile?.bio || 'Welcome to my personal website'}</p>
+          <p className="hero-bio">{profile?.quick_bio || 'Welcome to my personal website'}</p>
           <div className="hero-buttons">
-            <button 
+            <button
               className="btn btn-primary"
               onClick={() => scrollToSection('about')}
             >
               Learn More
             </button>
-            <button 
+            <button
               className="btn btn-secondary"
               onClick={() => scrollToSection('contact')}
             >

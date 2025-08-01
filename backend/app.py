@@ -13,16 +13,17 @@ CORS(app, supports_credentials=True)  # Enable CORS for React frontend with cred
 
 # Sample data for the personal website
 personal_info = {
-    "name": "Zachary Keller",
-    "title": "Software Developer",
-    "bio": "Passionate developer creating innovative solutions",
+    "name": "Zack Keller",
+    "short_name": "zk",
+    "title": "Analytics Professional",
+    "quick_bio": "Passionate about data, related topics, and some unrelated topics",
+    "bio": "Hiya, I'm Zack. Early in my career, I cut my teeth working with spreadsheets. That led me back to grad-school for stats (Go Blue). From there, I've worked in a handful of industries and worked to continue developing my abilities in the ever-expanding space of data and analytics.",
     "email": "contact@example.com",
-    "location": "Your Location",
-    "skills": ["Python", "JavaScript", "React", "Flask", "Node.js"],
+    "location": "Columbus, Ohio Metro",
+    "skills": ["R", "Python", "SQL", "Data-Viz", "BI", "dbt"],
     "social": {
         "github": "https://github.com/zkeller89",
-        "linkedin": "https://linkedin.com/in/yourprofile",
-        "twitter": "https://twitter.com/yourhandle",
+        "linkedin": "https://linkedin.com/in/zrkeller",
     },
 }
 
